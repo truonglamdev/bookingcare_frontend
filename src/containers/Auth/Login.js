@@ -5,7 +5,7 @@ import { push } from 'connected-react-router';
 
 import * as actions from '../../store/actions';
 
-import handleLoginApi from '../../services/userService';
+import { handleLoginApi } from '../../services/userService';
 
 import './Login.scss';
 
