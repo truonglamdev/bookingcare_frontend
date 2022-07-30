@@ -1,11 +1,44 @@
 import './HeaderHomePage.scss';
+import { useState } from 'react';
+import { FormattedMessage } from 'react-intl';
+
+import { connect } from 'react-redux';
+import { LANGUAGES } from '../../../utils/constant';
+
 import Image from '../../../components/Image/Image';
 import images from '../../../assets/images';
-import { FormattedMessage } from 'react-intl';
-import { connect } from 'react-redux';
 import Menu from '../../../components/Popper/Menu/Menu';
 
 function HeaderHomePage() {
+    const languages = [
+        {
+            title: 'English',
+            id: LANGUAGES.EN,
+            key: 'EN',
+            image: images.flagEn,
+        },
+        {
+            title: 'Việt Nam',
+            id: LANGUAGES.VI,
+            key: 'VN',
+            image: images.flagVn,
+        },
+        // {
+        //     title: 'Japan',
+        //     id: 'jb',
+        //     image: images.flagJp,
+        // },
+        // {
+        //     title: 'China',
+        //     id: 'cn',
+        //     image: images.flagCn,
+        // },
+    ];
+    const [language, setLanguage] = useState(images.flagVn);
+
+    const getLanguage = (data) => {
+        setLanguage(data.image);
+    };
     return (
         <div className="home-header-container">
             <div className="home-header-content">
@@ -63,8 +96,10 @@ function HeaderHomePage() {
                         </div>
                     </div>
                     <div className="languages">
-                        <Menu>
-                            <div className="language-vn">VN</div>
+                        <Menu languages={languages} getLanguage={getLanguage}>
+                            <div className="language-flag">
+                                <Image src={language} />
+                            </div>
                         </Menu>
                     </div>
                 </div>
@@ -79,6 +114,7 @@ const mapStateToProps = (state) => {
         language: state.app.language,
     };
 };
+
 
 const mapDispatchToProps = (dispatch) => {
     return {};

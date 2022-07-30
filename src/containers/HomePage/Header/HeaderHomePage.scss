@@ -133,33 +133,9 @@
             }
 
             .languages {
-
-                display: flex;
-                .language-vn,
-                .language-en {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                .language-flag {
                     height: 24px;
                     width: 24px;
-                    font-size: 12px;
-                    font-weight: 600;
-                    color: var(--text-color);
-                    border-radius: 50%;
-                    cursor: pointer;
-                    transition: 0.3s;
-
-                    &:hover {
-                        opacity: 0.8;
-                    }
-                }
-                .language-vn {
-                    background-color: rgb(247, 54, 54);
-                    margin-right: 10px;
-                }
-
-                .language-en {
-                    background-color: #48bde1;
                 }
             }
         }

@@ -10,6 +10,18 @@
         "check-health": "Khám sức khoẻ tổng quát",
         "support": "Hỗ trợ"
     },
+    "banner": {
+        "title": "NỀN TẢNG Y TẾ",
+        "description": "CHĂM SÓC SỨC KHỎE TOÀN DIỆN",
+        "specialty": "Khám chuyên khoa",
+        "remote": "Khám từ xa",
+        "general": "Khám tổng quát",
+        "medical-test": "Xét nghiệm y học",
+        "mental-health": "Sức khoẻ tinh thần",
+        "mental": "Khám nha khoa",
+        "surgery-package": "Gói phẩu thuật",
+        "medical-product": "Sản phẩm y tế"
+    },
     "common": {
         "add": "Thêm",
         "edit": "Sửa",

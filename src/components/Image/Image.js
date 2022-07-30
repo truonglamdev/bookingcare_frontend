@@ -11,7 +11,7 @@ const Image = forwardRef(({ src, alt, className, fallback: customFallback = imag
 });
 Image.propTypes = {
     src: PropTypes.string,
-    alt: PropTypes.string,
+    alt: PropTypes.node,
     className: PropTypes.string,
     fallback: PropTypes.string,
 };

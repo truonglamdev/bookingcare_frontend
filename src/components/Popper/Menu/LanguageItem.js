@@ -1,15 +1,23 @@
 import classNames from 'classnames/bind';
 import Image from '../../Image/Image';
 import styles from '../Menu/LanguageItem.module.scss';
+import { changeLanguageApp } from '../../../store/actions';
+import { useDispatch } from 'react-redux';
 
 const cx = classNames.bind(styles);
-function LanguageItem({ data }) {
+function LanguageItem({ data, func }) {
+    const dispatch = useDispatch();
+
+    const handleChangeLanguage = (language) => {
+        dispatch(changeLanguageApp(language));
+        func(data);
+    };
     return (
-        <div className={cx('wrapper')}>
+        <div className={cx('wrapper')} onClick={() => handleChangeLanguage(data.id)}>
             <div className={cx('language-image')}>
-                <Image src="https://banggia.vndirect.com.vn/static/media/uk.e5564902e2.svg" />
+                <Image src={data.image} alt={data.title} />
             </div>
-            <div className={cx('language-title')}>English</div>
+            <div className={cx('language-title')}>{data.title}</div>
         </div>
     );
 }

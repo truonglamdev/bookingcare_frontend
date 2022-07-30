@@ -2,7 +2,7 @@ import React from 'react';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 
-import CustomToast from "../components/CustomToast";
+import CustomToast from '../components/Customs/CustomToast';
 
 const TYPE_SUCCESS = 'SUCCESS';
 const TYPE_INFO = 'INFO';
@@ -10,7 +10,6 @@ const TYPE_WARN = 'WARN';
 const TYPE_ERROR = 'ERROR';
 
 class ToastUtil {
-
     static success(title, message) {
         this.show(TYPE_SUCCESS, title, message);
     }
@@ -52,22 +51,29 @@ class ToastUtil {
         } else {
             // Request fail even server was returned a success response
             if (error.errorMessage) {
-                message = error.errorMessage
+                message = error.errorMessage;
             }
         }
         toast.error(<CustomToast titleId={title} message={message} messageId={messageId} time={new Date()} />, {
             position: toast.POSITION.BOTTOM_RIGHT,
             pauseOnHover: true,
-            autoClose: autoCloseDelay
+            autoClose: autoCloseDelay,
         });
     }
 
     static show(type, title, message, rawMessage = false, autoCloseDelay = 3000) {
-        const content = <CustomToast titleId={title} messageId={rawMessage ? null : message} message={rawMessage ? message : null} time={new Date()} />;
+        const content = (
+            <CustomToast
+                titleId={title}
+                messageId={rawMessage ? null : message}
+                message={rawMessage ? message : null}
+                time={new Date()}
+            />
+        );
         const options = {
             position: toast.POSITION.BOTTOM_RIGHT,
             pauseOnHover: true,
-            autoClose: autoCloseDelay
+            autoClose: autoCloseDelay,
         };
 
         switch (type) {

@@ -3,7 +3,12 @@ const images = {
     noImage: require('../images/no-image.png'),
     appStore: require('../images/app-store.svg').default,
     googlePlay: require('../images/google-play.svg').default,
-};
 
+    //languages flag image
+    flagVn: require('../images/languages/vietnam.svg').default,
+    flagEn: require('../images/languages/english.svg').default,
+    flagCn: require('../images/languages/china.svg').default,
+    flagJp: require('../images/languages/japan.svg').default,
+};
 
 export default images;

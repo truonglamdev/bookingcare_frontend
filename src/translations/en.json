@@ -10,6 +10,18 @@
         "check-health": "General health check",
         "support": "Support"
     },
+    "banner": {
+        "title": "MEDICAL BACKGROUND",
+        "description": "COMPREHENSIVE HEALTH CARE",
+        "specialty": "Specialty examination",
+        "remote": "Remote examination",
+        "general": "General examination",
+        "medical-test": "Medical test",
+        "mental-health": "Mental health",
+        "mental": "Dental examination",
+        "surgery-package": "Surgery package",
+        "medical-product": "Medical products"
+    },
     "common": {
         "add": "Add",
         "edit": "Edit",
