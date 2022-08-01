@@ -2,15 +2,20 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import HeaderHomePage from './Header/HeaderHomePage';
 import Banner from './Banner/Banner';
-import Diagnostic from './Actions/Diagnostic';
 
+import Action from './Actions'
+
+import styles from './HomePage.module.scss';
+import classNames from 'classnames/bind';
+
+const cx = classNames.bind(styles);
 class HomePage extends Component {
     render() {
         return (
-            <div style={{ minHeight: '1000px', overflowY: 'auto' }}>
+            <div className={cx('wrapper')}>
                 <HeaderHomePage />
                 <Banner />
-                <Diagnostic />
+                <Action/>
             </div>
         );
     }

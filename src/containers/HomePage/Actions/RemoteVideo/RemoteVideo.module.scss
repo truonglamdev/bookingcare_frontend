@@ -1,0 +1,25 @@
+.slider-item {
+    // height: 200px;
+    width: 200px;
+    padding: 0 10px;
+
+    .avatar {
+        width: 100%;
+        margin-bottom: 10px;
+
+        .img {
+            width: 100%;
+        }
+    }
+
+    .description {
+        margin: 10px 0;
+        font-size: 14px;
+        font-weight: 500;
+        color: #333;
+
+        &:hover {
+            color: aqua;
+        }
+    }
+}

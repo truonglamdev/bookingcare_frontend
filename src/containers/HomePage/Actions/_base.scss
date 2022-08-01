@@ -1,0 +1,29 @@
+:root {
+    --margin-container: 60px;
+}
+
+.wrapper {
+    width: 100%;
+    padding: 20px 0 30px 0;
+
+    .header {
+        display: flex;
+        margin: 0 var(--margin-container);
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+
+        .title-header{
+            font-size: 24px;
+            font-weight: 500;
+            color: #333;
+        }
+    }
+
+    .content {
+        margin: 0 auto;
+        max-width: calc(100% - var(--margin-container) * 2);
+        height: 80%;
+        
+    }
+}

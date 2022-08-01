@@ -1,27 +1,26 @@
+import SlickSlider from '../../components/SlickSlider';
 import classNames from 'classnames/bind';
-import styles from './Diagnostic.module.scss';
+import styles from './Specialty.module.scss';
+import '../_base.scss';
 
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import { SampleNextArrow, SamplePrevArrow } from '../../../../components/Customs/ButtonSlider';
+import Button from '../../../../components/Button';
 import Image from '../../../../components/Image';
 
 const cx = classNames.bind(styles);
-function Diagnostic() {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 700,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
-    };
+function Specialty() {
     return (
         <div className={cx('wrapper')}>
+            <div className={cx('header')}>
+                <div className={cx('title-header')}>Bác sĩ từ xa qua Video</div>
+                <div>
+                    <Button primary rightIcon={<i className="fas fa-search"></i>} onClick={() => alert('click me')}>
+                        Tìm kiếm
+                    </Button>
+                    
+                </div>
+            </div>
             <div className={cx('content')}>
-                <Slider {...settings}>
+                <SlickSlider dots={false} slidesToScroll={4}>
                     <div className={cx('slider-item')}>
                         <div className={cx('avatar')}>
                             <Image
@@ -72,10 +71,10 @@ function Diagnostic() {
                         </div>
                         <div className={cx('description')}>Thần kinh</div>
                     </div>
-                </Slider>
+                </SlickSlider>
             </div>
         </div>
     );
 }
 
-export default Diagnostic;
+export default Specialty;
