@@ -1,10 +1,10 @@
-@import "../../styles/common.scss";
+@import '../../styles/common.scss';
 
 .header-container {
     z-index: 99;
     display: flex;
     justify-content: space-between;
-    background-color: $colormain;
+    background: $primary-background;
     color: $common-text-color;
     height: 40px;
     position: relative;
@@ -18,6 +18,26 @@
         }
         i {
             font-size: $base-size + 1px;
+        }
+    }
+
+    .header-actions-container {
+        display: flex;
+        align-items: center;
+
+        .languages {
+            display: flex;
+            margin-right: 10px;
+            width: 100%;
+
+            .welcome {
+                font-size: 14px;
+                margin-right: 10px;
+            }
+            .language-flag {
+                height: 24px;
+                width: 24px;
+            }
         }
     }
 }

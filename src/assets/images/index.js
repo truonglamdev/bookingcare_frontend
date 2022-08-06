@@ -9,6 +9,9 @@ const images = {
     flagEn: require('../images/languages/english.svg').default,
     flagCn: require('../images/languages/china.svg').default,
     flagJp: require('../images/languages/japan.svg').default,
+
+    //
+    bookingApp: require('../images/bookingcare-app.png').default,
 };
 
 export default images;

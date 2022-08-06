@@ -1,0 +1,85 @@
+.download-app-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: #f5f5f5;
+
+    border-bottom: 3px solid #efeef5;
+
+    .download-app-content {
+        padding: 45px 0;
+        display: flex;
+        margin: 0 auto;
+        border: 1px solid red;
+
+        .content-left {
+            margin-right: 30px;
+
+            .download-app-image {
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+
+        .content-right {
+            display: flex;
+            flex-direction: column;
+            .content-title {
+                display: flex;
+                font-size: 16px;
+                padding: 4px 0;
+                font-weight: 600;
+                color: #333;
+            }
+
+            .list-benefit {
+                .item {
+                    display: flex;
+
+                    i {
+                        font-size: 14px;
+                        display: flex;
+                        align-items: center;
+                        margin-right: 10px;
+                        color: #48bde1;
+                        padding: 8px 0;
+                    }
+
+                    span {
+                        display: flex;
+                        align-items: center;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #333;
+                    }
+                }
+            }
+            .app-mobile {
+                display: flex;
+                padding: 10px 0;
+                .app-store {
+                    margin-right: 10px;
+                }
+
+                .google-play,
+                .app-store {
+                    height: 40px;
+                    width: 135px;
+                    cursor: pointer;
+                }
+            }
+
+            .contact {
+                font-size: 14px;
+                font-weight: 300;
+                padding: 4px 0;
+
+                a {
+                    text-decoration: none;
+                    font-style: italic;
+                    color: #48bde1;
+                }
+            }
+        }
+    }
+}

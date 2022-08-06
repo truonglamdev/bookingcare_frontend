@@ -1,0 +1,32 @@
+:root {
+    --margin-container: 60px;
+}
+.footer-container {
+    .footer-content {
+        padding: 40px 0;
+        margin: 0 var(--margin-container);
+        .content-left {
+            border: 1px solid yellow;
+
+            .info {
+                .logo {
+                    padding-bottom: 20px;
+                    .logo-image {
+                        height: 45px;
+                    }
+                }
+            }
+        }
+        .content-right {
+            border: 1px solid yellow;
+
+            .contact {
+                border: 1px solid black;
+            }
+
+            .location {
+                border: 1px solid black;
+            }
+        }
+    }
+}

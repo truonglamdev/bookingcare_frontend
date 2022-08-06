@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import HeaderHomePage from './Header/HeaderHomePage';
-import Banner from './Banner/Banner';
 
-import Action from './Actions'
+import Banner from './Banner/Banner';
+import Action from './Actions';
+import Footer from './Footer/Footer';
 
 import styles from './HomePage.module.scss';
 import classNames from 'classnames/bind';
@@ -15,7 +16,8 @@ class HomePage extends Component {
             <div className={cx('wrapper')}>
                 <HeaderHomePage />
                 <Banner />
-                <Action/>
+                <Action />
+                <Footer />
             </div>
         );
     }
